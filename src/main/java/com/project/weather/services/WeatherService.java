@@ -21,7 +21,7 @@ public class WeatherService {
     private RestTemplate restTemplate;
     private String url;
     //private final WeatherRepository weatherRepository;
-
+    //
 
     public ResponseEntity getWeather(String city){
         try {
