@@ -1,4 +1,3 @@
-/*
 package com.project.weather.entities;
 
 import lombok.AllArgsConstructor;
@@ -24,6 +23,6 @@ public class WeatherEntity {
     String city;
 
     @Column(name = "count")
-    Long count;
+    int count = 1;
 }
-*/
+

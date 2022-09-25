@@ -1,4 +1,3 @@
-/*
 package com.project.weather.repositories;
 
 import com.project.weather.entities.WeatherEntity;
@@ -9,4 +8,3 @@ public interface WeatherRepository extends JpaRepository<WeatherEntity, Long> {
     public boolean existsByCity(String city);
     public WeatherEntity findByCity(String city);
 }
-*/
