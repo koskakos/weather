@@ -27,6 +27,11 @@ public class WeatherController {
         return weatherService.getWeather(city);
     }
 
+    @ResponseBody
+    @GetMapping("/database")
+    public ResponseEntity getDataBase(){
+        return weatherService.getInfoFromDataBase();
+    }
     /*@GetMapping ("/test")
     @ResponseBody
     public ResponseEntity test(String){

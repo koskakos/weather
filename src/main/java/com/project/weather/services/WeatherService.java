@@ -6,6 +6,7 @@ import com.project.weather.entities.WeatherEntity;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Sort;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -53,5 +54,11 @@ public class WeatherService {
         WeatherEntity t = weatherRepository.findByCity(city);
         t.setCount(t.getCount()+1);
         weatherRepository.save(t);
+    }
+
+    public ResponseEntity getInfoFromDataBase(){
+        //weatherRepository.findByOrderByCount();
+        return ResponseEntity.ok(weatherRepository.findAll(Sort.by(Sort.Direction.DESC, "count")));
+        //return ResponseEntity.ok(weatherRepository.find)
     }
 }
